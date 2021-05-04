@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Atq-LT-bin">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="s3t-HA-SJV">
+            <objects>
+                <viewController id="Atq-LT-bin" customClass="CardViewController" customModule="DeckOfOneCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JQi-Py-2LF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="We4-zY-Zk3">
+                                <rect key="frame" x="87" y="145" width="240" height="616"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbP-Eh-dim">
+                                <rect key="frame" x="186" y="94" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INK-0N-Ng1">
+                                <rect key="frame" x="145" y="791" width="124" height="31"/>
+                                <state key="normal" title="Draw"/>
+                                <connections>
+                                    <action selector="drawButtonTapped:" destination="Atq-LT-bin" eventType="touchUpInside" id="PfI-Td-402"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GBH-se-S4y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JbP-Eh-dim" firstAttribute="centerX" secondItem="GBH-se-S4y" secondAttribute="centerX" id="0fi-WU-ZrL"/>
+                            <constraint firstItem="We4-zY-Zk3" firstAttribute="centerX" secondItem="GBH-se-S4y" secondAttribute="centerX" id="5sR-y4-I8T"/>
+                            <constraint firstItem="INK-0N-Ng1" firstAttribute="width" secondItem="GBH-se-S4y" secondAttribute="width" multiplier="0.3" id="A6C-NW-eIw"/>
+                            <constraint firstItem="GBH-se-S4y" firstAttribute="trailing" secondItem="We4-zY-Zk3" secondAttribute="trailing" constant="87" id="ANt-02-t7y"/>
+                            <constraint firstItem="JbP-Eh-dim" firstAttribute="top" secondItem="GBH-se-S4y" secondAttribute="top" constant="50" id="DGI-nf-FRC"/>
+                            <constraint firstItem="We4-zY-Zk3" firstAttribute="leading" secondItem="GBH-se-S4y" secondAttribute="leading" constant="87" id="EbC-B3-aSW"/>
+                            <constraint firstItem="We4-zY-Zk3" firstAttribute="top" secondItem="JbP-Eh-dim" secondAttribute="bottom" constant="30" id="HcV-qr-60b"/>
+                            <constraint firstItem="INK-0N-Ng1" firstAttribute="top" secondItem="We4-zY-Zk3" secondAttribute="bottom" constant="30" id="RPo-nj-uK7"/>
+                            <constraint firstItem="GBH-se-S4y" firstAttribute="bottom" secondItem="INK-0N-Ng1" secondAttribute="bottom" constant="40" id="jaQ-cz-Zd3"/>
+                            <constraint firstItem="INK-0N-Ng1" firstAttribute="centerX" secondItem="GBH-se-S4y" secondAttribute="centerX" id="rTp-ag-srq"/>
+                            <constraint firstItem="We4-zY-Zk3" firstAttribute="centerY" secondItem="GBH-se-S4y" secondAttribute="centerY" id="rdQ-Rb-Bq1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="We4-zY-Zk3" id="kfL-Ne-LgQ"/>
+                        <outlet property="cardTitleLabel" destination="JbP-Eh-dim" id="Blg-QY-T5K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VG7-nI-zS2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
